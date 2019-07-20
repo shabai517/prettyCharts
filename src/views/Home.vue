@@ -1,18 +1,26 @@
 <template>
 	<div class="home">
-		<Row>
-		 	<Col span="12">
-		 		<chart :type='bar.type' :dataSource="bar.dataSource" :height="bar.height"></chart>
-		 	</Col>
-		  	<Col span="12">
-		  		<chart :type='mssplinearea.type' :dataSource="mssplinearea.dataSource" :height="mssplinearea.height"></chart>
-		  	</Col>
-		</Row>
-		<Row>
-		  	<Col span="24">
-		  		<chart :type='mscombidy2d.type' :dataSource="mscombidy2d.dataSource" :height="mscombidy2d.height"></chart>
-		  	</Col>
-		</Row>
+		<div class="container">
+			<Row>
+			 	<Col span="11">
+			 		<Card>
+			 			<chart :type='bar.type' :dataSource="bar.dataSource" :height="bar.height"></chart>
+			 		</Card>
+			 	</Col>
+			  	<Col span="11" offset="2">
+			  		<Card>
+			  			<chart :type='mssplinearea.type' :dataSource="mssplinearea.dataSource" :height="mssplinearea.height"></chart>
+			  		</Card>
+			  	</Col>
+			</Row>
+			<Row class="row">
+			  	<Col span="24">
+			  		<Card>
+			  			<chart :type='mscombidy2d.type' :dataSource="mscombidy2d.dataSource" :height="mscombidy2d.height"></chart>
+			  		</Card>	
+			  	</Col>
+			</Row>
+		</div>
 	</div>
 </template>
 <script>
@@ -35,17 +43,19 @@
 	                  yAxisName: "Reserves (MMbbl)",
 	                  numberSuffix: "K",
 	                  theme: "fusion",
+	                  xAxisNameFontSize:14,
+	                  labelFontSize:14,
 	              },
 	              // Chart Data
 	              data: [
 		                {
-		                    label: "Venezuela",
+		                    label: "UK",
 		                    value: 90
 		                }, {
 		                    label: "Saudi",
 		                    value: 260
 		                }, {
-		                    label: "Canada",
+		                    label: "India",
 		                    value: 180
 		                }, {
 		                    label: "Iran",
@@ -390,7 +400,7 @@
 				        }
 				    ]
 				}
-	  		}
+	  		},
 	  	}
 	  },
 	  mounted () {
@@ -401,7 +411,16 @@
 <style scoped>
 .home {
 	position: relative;
-	height: 100vh;
+	height: 100%;
+	width: 100%
+}
+.container{
+	width: 90%;
+	margin:0 auto;
+	padding: 40px 0;
+}
+.row{
+	margin:40px 0;
 }
 </style>
 <style>

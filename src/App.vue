@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background: white;
+  background: #f8f8f8;
   /*min-width: 600px;*/
   font-size: 14px;
   overflow: hidden;

@@ -15,6 +15,11 @@ import FusionCharts from 'fusioncharts';
 import Column2D from 'fusioncharts/fusioncharts.charts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 
+//for apexcharts
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
+Vue.component('apexchart', VueApexCharts)
+
 Vue.use(iView)
 Vue.use(VueResource);
 
