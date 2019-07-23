@@ -1,13 +1,41 @@
 <template>
 	<div class="home">
+		<div class="nav">
+			<div class="header">
+				<span class="first">Pretty</span><span>Charts</span>
+				<Divider class="line"/>
+			</div>
+			<div class="header-link">
+				<div class="link">
+					<Icon type="ios-home-outline" size="18"/>
+					<a href="">Dashboard</a>
+				</div>
+				<div class="link">
+					<Icon type="ios-home-outline" size="18"/>
+					<a href="">Todo</a>
+				</div>
+				<div class="link">
+					<Icon type="ios-home-outline" size="18"/>
+					<a href="">Todo</a>
+				</div>
+				<div class="link">
+					<Icon type="ios-home-outline" size="18"/>
+					<a href="">Todo</a>
+				</div>
+				<div class="link">
+					<Icon type="ios-home-outline" size="18"/>
+					<a href="">Todo</a>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<Row>
-			 	<Col span="11">
+			 	<Col span="12">
 			 		<Card>
 			 			<chart :type='bar.type' :dataSource="bar.dataSource" :height="bar.height"></chart>
 			 		</Card>
 			 	</Col>
-			  	<Col span="11" offset="2">
+			  	<Col span="11" offset="1">
 			  		<Card>
 			  			<chart :type='mssplinearea.type' :dataSource="mssplinearea.dataSource" :height="mssplinearea.height"></chart>
 			  		</Card>
@@ -411,16 +439,64 @@
 <style scoped>
 .home {
 	position: relative;
-	height: 100%;
-	width: 100%
+	height: 100vh;
+	width: 100%;
+	display: flex;
 }
 .container{
 	width: 90%;
 	margin:0 auto;
-	padding: 40px 0;
+	height: 100vh;
+	padding: 40px;
+	overflow-y: scroll;
 }
 .row{
 	margin:40px 0;
+}
+.nav{
+	width: 250px;
+	height: 100vh;
+	background-color: white;
+	color:#6c757d;
+	border-right: 1px solid #dcdee2;
+    border-color: #e8eaec;
+}
+.header{
+	padding: 24px 10px 0 10px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+.header .first{
+	color:rgb(93, 98, 181);
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 20px;
+}
+.header .line{
+	margin-bottom: 0 !important;
+}
+.link{
+	height: 55px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.link:hover{
+	background-color: #f8f8f8;
+}
+.link:hover a{
+	color: rgb(93, 98, 181);
+	font-weight: bold;
+}
+.link:hover i{
+	color: rgb(93, 98, 181);
+	font-weight: bold;
+}
+.link a{
+	color:#6c757d;
+	margin-left: 10px;
 }
 </style>
 <style>
